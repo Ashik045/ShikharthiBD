@@ -1,0 +1,113 @@
+// navbar.module.scss
+
+.navbar {
+  background-color: #0f172a; // Dark blue for a professional academic vibe
+  color: #ffffff;
+  padding: 20px 0;
+
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &_icon {
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #38bdf8; // Tailwind's sky-400
+      }
+    }
+  }
+
+  .nav_menus {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      li {
+        a {
+          text-decoration: none;
+          color: #e2e8f0;
+          font-weight: 500;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #facc15; // Tailwind's yellow-400
+          }
+        }
+      }
+
+      .nav_item {
+        position: relative;
+
+        a {
+          text-decoration: none;
+          color: #e2e8f0;
+          font-weight: 500;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #facc15;
+          }
+        }
+
+        // Dropdown menu
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #1e293b;
+          border: 1px solid #475569;
+          border-radius: 5px;
+          padding: 9px 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease;
+          min-width: 150px;
+          display: block;
+
+          li {
+            padding: 7px 20px;
+
+            a {
+              color: #e2e8f0;
+              text-decoration: none;
+              transition: all 0.3s;
+
+              &:hover {
+                color: #facc15;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        &:hover .dropdown {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

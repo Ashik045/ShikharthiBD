@@ -1,8 +1,11 @@
+import Header from "@/components/Header/Header";
+import Navbar from "@/components/Navbar/Navbar";
+
 export default function Home() {
   return (
     <div className="">
-      <h1>shikharthibd</h1>
-      <p>updated.</p>
+      <Navbar />
+      <Header />
     </div>
   );
 }
