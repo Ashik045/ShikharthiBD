@@ -11,7 +11,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -33,17 +33,23 @@
     }
   }
 
+  .menu_toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+
   .nav_menus {
     ul {
       list-style: none;
       display: flex;
-      gap: 30px;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-      }
+      gap: 20px;
 
       li {
         a {
@@ -108,6 +114,60 @@
           visibility: visible;
         }
       }
+
+      .language {
+        background-color: #0f172a; // Dark blue for a professional academic vibe
+        color: #e2e8f0;
+        padding: 1px 5px;
+      }
+
+      .user_photo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav_menus {
+    position: fixed;
+    top: 87px;
+    left: -80%;
+    width: 70%;
+    height: 100%;
+    background-color: #1e293b;
+    transition: left 0.5s ease;
+
+    &.open {
+      left: 0;
+    }
+
+    ul {
+      flex-direction: column;
+      padding: 10px 20px;
+
+      li {
+        margin: 10px 0;
+      }
+
+      .nav_item {
+        position: relative;
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 100px;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .nav_menus {
+    width: 80%;
   }
 }
