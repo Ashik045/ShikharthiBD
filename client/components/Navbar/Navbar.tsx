@@ -11,6 +11,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  //
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar_main}>
