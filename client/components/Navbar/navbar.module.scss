@@ -143,23 +143,23 @@
 
     &.open {
       left: 0;
-    }
 
-    ul {
-      flex-direction: column;
-      padding: 10px 20px;
+      ul {
+        flex-direction: column;
+        padding: 10px 20px;
 
-      li {
-        margin: 10px 0;
-      }
+        li {
+          margin: 10px 0;
+        }
 
-      .nav_item {
-        position: relative;
-        .dropdown {
-          position: absolute;
-          top: 100%;
-          left: 100px;
-          color: red;
+        .nav_item {
+          position: relative;
+          .dropdown {
+            position: absolute;
+            top: 0;
+            left: 140px;
+            color: red;
+          }
         }
       }
     }
