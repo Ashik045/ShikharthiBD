@@ -130,14 +130,18 @@
   .nav_menus {
     position: fixed;
     top: 87px;
-    left: -80%;
+    left: -70%;
     width: 70%;
     height: 100%;
     background-color: #1e293b;
-    transition: left 0.5s ease;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0.8;
+    visibility: hidden;
 
     &.open {
       left: 0;
+      opacity: 1;
+      visibility: visible;
 
       ul {
         flex-direction: column;
@@ -149,14 +153,35 @@
 
         .nav_item {
           position: relative;
+
           .dropdown {
             position: absolute;
             top: 0;
             left: 140px;
-            color: red;
+            background-color: #334155;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+            li {
+              margin: 5px 0;
+            }
+          }
+
+          &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
+    }
+
+    &.not_open {
+      left: -70%;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

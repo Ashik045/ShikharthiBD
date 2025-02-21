@@ -23,7 +23,11 @@ const Navbar = () => {
           <h1>ShikharthiBD</h1>
         </div>
 
-        <div className={`${styles.nav_menus} ${isMenuOpen ? styles.open : ""}`}>
+        <div
+          className={`${styles.nav_menus} ${
+            isMenuOpen ? styles.open : styles.not_open
+          }`}
+        >
           <ul>
             <li className={styles.nav_item}>
               <a href="#">Questions</a>
