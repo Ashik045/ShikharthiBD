@@ -2,6 +2,7 @@
 
 import userPhoto from "@/public/images/no-photo.png";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import styles from "./navbar.module.scss";
 const Navbar = () => {
@@ -20,7 +21,9 @@ const Navbar = () => {
         </button>
 
         <div className={styles.navbar_icon}>
-          <h1>ShikharthiBD</h1>
+          <h1>
+            <Link href="/"> ShikharthiBD</Link>
+          </h1>
         </div>
 
         <div
