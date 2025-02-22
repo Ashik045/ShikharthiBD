@@ -16,7 +16,7 @@
     border-radius: 4px;
 
     h3 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 10px;
       color: #1e293b; // Dark slate gray for a professional feel
       font-weight: bold;
@@ -65,8 +65,18 @@
       color: #dc2626; // A deeper red for better visibility
       text-align: center;
     }
+  }
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .newsletter {
+    .newsletter_main {
+      display: grid;
+      grid-template-columns: 95%;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
       .form {
         flex-direction: column;
         align-items: center;
