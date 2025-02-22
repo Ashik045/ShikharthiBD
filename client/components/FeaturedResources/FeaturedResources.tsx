@@ -1,5 +1,6 @@
+"use client";
 import { useState } from "react";
-import styles from "./FeaturedResources.module.scss";
+import styles from "./featuredResources.module.scss";
 
 const FeaturedResources = () => {
   const [hovered, setHovered] = useState<number | null>(null);

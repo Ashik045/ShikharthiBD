@@ -1,0 +1,148 @@
+.jobOpportunities {
+  background-color: #f8fafc;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+  }
+
+  .jobsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+
+    .jobCard {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .companyLogo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+
+      .jobDetails {
+        text-align: left;
+
+        h3 {
+          font-size: 1.4rem;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        .companyName {
+          font-size: 1.1rem;
+          color: #0070f3;
+          margin-bottom: 5px;
+        }
+
+        .jobLocation {
+          font-size: 1rem;
+          color: #777;
+          margin-bottom: 15px;
+        }
+
+        .jobDescription {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 15px;
+        }
+
+        .viewJobBtn {
+          display: inline-block;
+          background-color: #0070f3;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1rem;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #005bb5;
+          }
+        }
+      }
+    }
+  }
+
+  .careerAdvice {
+    text-align: center;
+    margin-top: 40px;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .adviceContent {
+      p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .viewAdviceBtn {
+        background-color: #0070f3;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #005bb5;
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness
+@media screen and (max-width: 768px) {
+  .jobOpportunities {
+    padding: 20px 10px;
+  }
+
+  .jobsList {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .jobCard {
+    padding: 15px;
+  }
+
+  .careerAdvice h3 {
+    font-size: 1.5rem;
+  }
+
+  .adviceContent p {
+    font-size: 1rem;
+  }
+}
