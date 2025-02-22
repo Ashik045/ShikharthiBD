@@ -1,0 +1,81 @@
+.newsletter {
+  color: #1e293b; // Updated text color
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px 0;
+
+  .newsletter_main {
+    padding: 40px;
+    background-color: #dbeafe;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 4px;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #1e293b; // Dark slate gray for a professional feel
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #334155; // Muted slate gray for better readability
+      margin-bottom: 15px;
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .input {
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+      color: #0f172a;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #facc15;
+      color: #0f172a;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #eab308;
+      }
+    }
+
+    .message {
+      margin-bottom: -15px;
+      font-size: 1rem;
+      color: #dc2626; // A deeper red for better visibility
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .form {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}
