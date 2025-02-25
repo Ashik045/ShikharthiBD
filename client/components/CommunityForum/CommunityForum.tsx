@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Question from "../Question/Question";
 import styles from "./CommunityForum.module.scss";
 
 export interface Comment {
@@ -65,21 +66,11 @@ const CommunityForum = () => {
 
       <div className={styles.questionsList}>
         {questions.length > 0 ? (
-          questions.slice(0, 4).map((question) => (
-            <div className={styles.questionCard} key={question._id}>
-              {" "}
-              {/* Using _id for key */}
-              <h3>{question.title}</h3>
-              <p>{question.question.slice(0, 100)}...</p>{" "}
-              {/* Display a brief preview */}
-              <a
-                href={`https://askloom.vercel.app/questions/${question._id}`} // Corrected to use _id instead of id
-                className={styles.viewQuestionBtn}
-              >
-                View Question
-              </a>
-            </div>
-          ))
+          questions
+            .slice(0, 4)
+            .map((question) => (
+              <Question key={question._id} question={question} />
+            ))
         ) : (
           <p>Loading questions...</p>
         )}
@@ -92,7 +83,7 @@ const CommunityForum = () => {
           community.
         </p>
         <a
-          href="https://askloom.vercel.app/ask"
+          href="https://askloom.vercel.app/createquestion"
           className={styles.askQuestionBtn}
         >
           Ask a Question
