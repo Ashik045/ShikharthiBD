@@ -1,3 +1,4 @@
+import CommunityForum from "@/components/CommunityForum/CommunityForum";
 import FeaturedResources from "@/components/FeaturedResources/FeaturedResources";
 import Header from "@/components/Header/Header";
 import JobOpportunities from "@/components/JobOpportunities/JobOpportunities";
@@ -11,6 +12,7 @@ export default function Home() {
       <FeaturedResources />
       <PopularCourses />
       <JobOpportunities />
+      <CommunityForum />
       <Newsletter />
     </div>
   );

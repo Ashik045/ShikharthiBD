@@ -1,5 +1,9 @@
+"use client";
+
+import jobLogo from "@/public/images/309.jpg";
+import Image from "next/image";
 import { useState } from "react";
-import styles from "./JobOpportunities.module.scss";
+import styles from "./jobOpportunities.module.scss";
 
 const JobOpportunities = () => {
   const [jobs] = useState([
@@ -9,7 +13,7 @@ const JobOpportunities = () => {
       location: "Dhaka, Bangladesh",
       description:
         "Join our team as a frontend developer to build modern, scalable web applications.",
-      logo: "https://via.placeholder.com/50x50",
+      logo: jobLogo,
       link: "/job/frontend-developer",
     },
     {
@@ -18,7 +22,7 @@ const JobOpportunities = () => {
       location: "Chittagong, Bangladesh",
       description:
         "Help businesses make informed decisions using data analysis and visualization tools.",
-      logo: "https://via.placeholder.com/50x50",
+      logo: jobLogo,
       link: "/job/data-analyst",
     },
     {
@@ -27,7 +31,7 @@ const JobOpportunities = () => {
       location: "Sylhet, Bangladesh",
       description:
         "Design intuitive user interfaces for both web and mobile platforms.",
-      logo: "https://via.placeholder.com/50x50",
+      logo: jobLogo,
       link: "/job/ui-ux-designer",
     },
   ]);
@@ -45,10 +49,12 @@ const JobOpportunities = () => {
       <div className={styles.jobsList}>
         {jobs.map((job, index) => (
           <div className={styles.jobCard} key={index}>
-            <img
+            <Image
               className={styles.companyLogo}
               src={job.logo}
               alt={job.company}
+              width={50}
+              height={50}
             />
             <div className={styles.jobDetails}>
               <h3>{job.title}</h3>
@@ -61,17 +67,6 @@ const JobOpportunities = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className={styles.careerAdvice}>
-        <h3>Career Advice & Interview Preparation</h3>
-        <div className={styles.adviceContent}>
-          <p>
-            Get tips on how to ace your interviews, improve your resume, and
-            build your professional network.
-          </p>
-          <button className={styles.viewAdviceBtn}>View Career Advice</button>
-        </div>
       </div>
     </section>
   );
