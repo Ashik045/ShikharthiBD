@@ -32,7 +32,10 @@ const Question = ({ question }: QuestionProps) => {
   return (
     <div className={styles.single_question}>
       <div className={styles.question_user}>
-        <Link href={`/profile/${question.userid}`}>
+        <Link
+          href={`${process.env.NEXT_PUBLIC_ASKLOOM_URL}/profile/${question.userid}`}
+          target="blank"
+        >
           <Image
             src={question?.userPhoto ? question.userPhoto : nophoto}
             height={37}
@@ -46,7 +49,8 @@ const Question = ({ question }: QuestionProps) => {
 
         <div className={styles.post_user_nameandtime}>
           <Link
-            href={`/profile/${question.userid}`}
+            href={`${process.env.NEXT_PUBLIC_ASKLOOM_URL}/profile/${question.userid}`}
+            target="blank"
             style={{ textDecoration: "none" }}
           >
             <p className={styles.username}>{question.user}</p>
@@ -56,7 +60,13 @@ const Question = ({ question }: QuestionProps) => {
 
       <div className={styles.question_body}>
         <h2 className={styles.question_title}>
-          <Link href={`/questions/${question._id}`}> {question.title}</Link>
+          <Link
+            href={`${process.env.NEXT_PUBLIC_ASKLOOM_URL}/questions/${question._id}`}
+            target="blank"
+          >
+            {" "}
+            {question.title}
+          </Link>
         </h2>
 
         <div className={styles.question_text}>
@@ -66,11 +76,32 @@ const Question = ({ question }: QuestionProps) => {
           ></div>
 
           <a
-            href={`/questions/${question._id}`}
+            href={`${process.env.NEXT_PUBLIC_ASKLOOM_URL}/questions/${question._id}`}
+            target="blank"
             className={styles.view_more_btn}
           >
             View More
           </a>
+        </div>
+
+        <div className={styles.add_like_cmnt}>
+          <p>
+            <span className={styles.likes}>
+              {question.reacts.length}
+              {question.reacts.length > 1 ? " Likes" : " Like"}
+            </span>
+          </p>
+          <p>
+            <span className={styles.comments}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_ASKLOOM_URL}/questions/${question._id}`}
+                target="blank"
+              >
+                {question.comments.length}{" "}
+                {question.comments.length > 1 ? "Answers" : "Answer"}
+              </Link>
+            </span>
+          </p>
         </div>
       </div>
     </div>
