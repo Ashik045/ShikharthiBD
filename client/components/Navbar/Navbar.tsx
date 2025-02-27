@@ -37,16 +37,16 @@ const Navbar = () => {
 
               <ul className={styles.dropdown}>
                 <li>
-                  <a href="#">Hons</a>
+                  <a href="/questions/honours">Hons</a>
                 </li>
                 <li>
-                  <a href="#">HSC</a>
+                  <a href="/questions/hsc">HSC</a>
                 </li>
                 <li>
-                  <a href="#">SSC</a>
+                  <a href="/questions/ssc">SSC</a>
                 </li>
                 <li>
-                  <a href="#">Admission</a>
+                  <a href="/questions/admission">Admission</a>
                 </li>
               </ul>
             </li>
