@@ -1,16 +1,12 @@
 .filter_container {
   border-radius: 2px;
 
-  background-color: #f8fafc;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-
   h3 {
-    font-size: 18px;
     font-weight: bold;
-    color: #333;
     text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
   }
 
   .filters {
@@ -28,23 +24,23 @@
       transition: all 0.2s ease-in-out;
 
       &:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        border-color: #facc15;
+        box-shadow: 0 0 5px #eab308;
       }
     }
 
     .apply_filter {
-      background: #007bff;
-      color: #fff;
-      padding: 10px;
+      background-color: #facc15;
+      color: #0f172a;
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease;
 
       &:hover {
-        background: #0056b3;
+        background-color: #eab308;
       }
     }
   }

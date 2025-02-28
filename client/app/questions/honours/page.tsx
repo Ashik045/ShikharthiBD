@@ -14,6 +14,10 @@ const HonoursPage = () => {
           boards={["Dhaka", "Rajshahi", "Chattogram"]}
         />
       </div>
+
+      <div className={styles.filter_results}>
+        {/* results will shown here */}
+      </div>
     </div>
   );
 };
