@@ -1,0 +1,20 @@
+.page_container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .filter_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
