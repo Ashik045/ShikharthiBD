@@ -1,19 +1,37 @@
-// app/components/Filter.tsx
 "use client";
-import { useState } from "react";
-
 import styles from "./filter.module.scss";
+
 interface FilterProps {
   years: string[];
   subjects: string[];
   boards: string[];
+  universities?: string[]; // Optional for Admission page
+  year: string;
+  setYear: (value: string) => void;
+  subject: string;
+  setSubject: (value: string) => void;
+  board?: string | null;
+  setBoard?: (value: string | null) => void;
+  university?: string | null;
+  setUniversity?: (value: string | null) => void;
+  onApply: () => void;
 }
 
-const Filter = ({ years, subjects, boards }: FilterProps) => {
-  const [year, setYear] = useState("");
-  const [subject, setSubject] = useState("");
-  const [board, setBoard] = useState("");
-
+const Filter = ({
+  years,
+  subjects,
+  boards,
+  universities,
+  year,
+  setYear,
+  subject,
+  setSubject,
+  board,
+  setBoard,
+  university,
+  setUniversity,
+  onApply,
+}: FilterProps) => {
   return (
     <div className={styles.filter_container}>
       <h3>Filter Questions</h3>
@@ -36,16 +54,37 @@ const Filter = ({ years, subjects, boards }: FilterProps) => {
           ))}
         </select>
 
-        <select value={board} onChange={(e) => setBoard(e.target.value)}>
-          <option value="">Select Board</option>
-          {boards.map((b) => (
-            <option key={b} value={b}>
-              {b}
-            </option>
-          ))}
-        </select>
+        {setBoard && (
+          <select
+            value={board || ""}
+            onChange={(e) => setBoard(e.target.value || null)}
+          >
+            <option value="">Select Board</option>
+            {boards.map((b) => (
+              <option key={b} value={b}>
+                {b}
+              </option>
+            ))}
+          </select>
+        )}
 
-        <button className={styles.apply_filter}>Apply</button>
+        {setUniversity && universities && (
+          <select
+            value={university || ""}
+            onChange={(e) => setUniversity(e.target.value || null)}
+          >
+            <option value="">Select University</option>
+            {universities.map((u) => (
+              <option key={u} value={u}>
+                {u}
+              </option>
+            ))}
+          </select>
+        )}
+
+        <button className={styles.apply_filter} onClick={onApply}>
+          Apply
+        </button>
       </div>
     </div>
   );
