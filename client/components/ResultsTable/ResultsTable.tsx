@@ -23,29 +23,31 @@ const ResultsTable = ({ results }: { results: any[] }) => {
             </tr>
           </thead>
           <tbody>
-            {results.map((item, index) => (
-              <tr key={item.id}>
-                <td>{index + 1}</td> {/* Serial Number */}
-                <td>{item.name}</td>
-                <td>{item.year}</td>
-                <td>{item.board || "N/A"}</td>
-                <td>
-                  <button
-                    className={styles.view_btn}
-                    onClick={() => setSelectedItem(item)}
-                  >
-                    View
-                  </button>
-                  <a
-                    href={item.pdfUrl}
-                    download
-                    className={styles.download_btn}
-                  >
-                    Download
-                  </a>
-                </td>
-              </tr>
-            ))}
+            {results.map((item, index) => {
+              return (
+                <tr key={item.id}>
+                  <td>{index + 1}</td> {/* Serial Number */}
+                  <td>{item.name}</td>
+                  <td>{item.year}</td>
+                  <td>{item.board || "N/A"}</td>
+                  <td>
+                    <button
+                      className={styles.view_btn}
+                      onClick={() => setSelectedItem(item)}
+                    >
+                      View
+                    </button>
+                    <a
+                      href={item.pdfUrl}
+                      download
+                      className={styles.download_btn}
+                    >
+                      Download
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       ) : (

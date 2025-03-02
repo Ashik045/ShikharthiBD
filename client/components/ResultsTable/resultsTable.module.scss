@@ -1,5 +1,35 @@
 .filter_results {
-  margin-top: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  min-height: 200px;
+  border-left: 6px solid #facc15;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e293b;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: -10px;
+
+    &::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background-color: #facc15;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+    }
+  }
 
   .results_table {
     width: 100%;
@@ -86,26 +116,28 @@
     right: 15px;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
-    color: #dc2626;
+    color: black;
+    transition: 0.2s ease;
 
     &:hover {
-      color: #b91c1c;
+      color: #1b1b1b;
     }
   }
 
   .close_btn {
-    background: #ef4444;
+    background: black;
     color: white;
     padding: 8px 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 13px;
+    transition: 0.2s ease;
 
     &:hover {
-      background: #dc2626;
+      background: #1b1b1b;
     }
   }
 

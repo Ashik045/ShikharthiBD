@@ -15,6 +15,7 @@ const HonoursPage = ({
   const university = searchParams.university || "";
 
   console.log(year, subject, board, university);
+  const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
 
   // create a function here to fetch the search results from database
 
@@ -23,12 +24,12 @@ const HonoursPage = ({
     {
       id: 1,
       name: "Math 2023 Question",
-      pdfUrl: "/questions/math-2023.pdf",
+      pdfUrl: pdfUrl,
     },
     {
       id: 2,
       name: "Physics 2022 Question",
-      pdfUrl: "/questions/physics-2022.pdf",
+      pdfUrl: pdfUrl,
     },
   ];
 
@@ -39,9 +40,7 @@ const HonoursPage = ({
         <Filter />
       </div>
 
-      <div className={styles.results_c}>
-        <ResultsTable results={results} />
-      </div>
+      <ResultsTable results={results} />
     </div>
   );
 };
