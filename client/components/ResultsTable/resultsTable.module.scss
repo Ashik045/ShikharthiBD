@@ -1,0 +1,132 @@
+.filter_results {
+  margin-top: 20px;
+
+  .results_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th,
+    td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #d1d5db; /* Line below each row */
+    }
+
+    th {
+      background-color: #facc15;
+      color: #1e293b;
+      font-weight: bold;
+    }
+
+    td {
+      background-color: #f8fafc;
+    }
+  }
+
+  .view_btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #2563eb;
+    }
+  }
+
+  .download_btn {
+    background-color: #10b981;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: #059669;
+    }
+  }
+
+  /* Popup Modal */
+  .popup_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .popup_content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-in-out;
+    position: relative;
+  }
+
+  /* Close Button (X) */
+  .close_popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #dc2626;
+
+    &:hover {
+      color: #b91c1c;
+    }
+  }
+
+  .close_btn {
+    background: #ef4444;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+
+    &:hover {
+      background: #dc2626;
+    }
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
