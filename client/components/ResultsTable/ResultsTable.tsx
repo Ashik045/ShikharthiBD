@@ -9,7 +9,7 @@ const ResultsTable = ({ results }: { results: any[] }) => {
 
   return (
     <div className={styles.filter_results}>
-      <h2>Filter Results</h2>
+      <h2>Filter Results:</h2>
 
       {results.length > 0 ? (
         <table className={styles.results_table}>

@@ -40,6 +40,7 @@ const HonoursPage = ({
         <Filter />
       </div>
 
+      {/* show the results here */}
       <ResultsTable results={results} />
     </div>
   );
