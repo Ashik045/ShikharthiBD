@@ -37,7 +37,7 @@ const HonoursPage = ({
     <div className={styles.page_container}>
       {/* Pass filters to the Filter component */}
       <div className={styles.filter_wrapper}>
-        <Filter />
+        <Filter hons />
       </div>
 
       {/* show the results here */}

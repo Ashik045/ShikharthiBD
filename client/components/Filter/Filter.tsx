@@ -5,7 +5,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import styles from "./filter.module.scss";
 
-const Filter = () => {
+type FilterParams = {
+  hons?: boolean;
+  ssc?: boolean;
+  hsc?: boolean;
+  admission?: boolean;
+};
+
+const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -34,32 +41,67 @@ const Filter = () => {
       <h3>Filter Questions</h3>
 
       <div className={styles.filters}>
-        <select value={year} onChange={(e) => setYear(e.target.value)}>
-          <option value="">Select Year</option>
-          <option value="2023">2023</option>
-          <option value="2022">2022</option>
-        </select>
+        {hons && (
+          <>
+            {" "}
+            <select
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            >
+              <option value="">Select Subject</option>
+              <option value="math">BENGALI</option>
+              <option value="physics">ENGLISH</option>
+              <option value="physics">HISTORY</option>
+              <option value="physics">ISLAMIC HISTORY & CULTURE</option>
+              <option value="physics">PHILOSOPHY</option>
+              <option value="physics">ISLAMIC STUDIES</option>
+              <option value="physics">POLITICAL SCIENCE</option>
+              <option value="physics">SOCIOLOGY </option>
+              <option value="physics">SOCIAL WORK </option>
+              <option value="physics">ECONOMICS </option>
+              <option value="physics">ACCOUNTING </option>
+              <option value="physics">MANAGEMENT </option>
+              <option value="physics">PHYSICS </option>
+              <option value="physics">CHEMISTRY </option>
+              <option value="physics">BOTANY </option>
+              <option value="physics">GEOGRAPHY AND ENVIRONMENT </option>
+              <option value="physics">MATHEMATICS </option>
+            </select>
+            <select value={year} onChange={(e) => setYear(e.target.value)}>
+              <option value="">Select Year</option>
+              <option value="2023">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2022">2021</option>
+              <option value="2022">2020</option>
+              <option value="2022">2019</option>
+              <option value="2022">2018</option>
+              <option value="2022">2017</option>
+              <option value="2022">2016</option>
+              <option value="2022">2015</option>
+            </select>
+          </>
+        )}
 
-        <select value={subject} onChange={(e) => setSubject(e.target.value)}>
-          <option value="">Select Subject</option>
-          <option value="math">Math</option>
-          <option value="physics">Physics</option>
-        </select>
+        {ssc ||
+          (hsc && (
+            <>
+              <select value={board} onChange={(e) => setBoard(e.target.value)}>
+                <option value="">Select Board</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="rajshahi">Rajshahi</option>
+              </select>
 
-        <select value={board} onChange={(e) => setBoard(e.target.value)}>
-          <option value="">Select Board</option>
-          <option value="dhaka">Dhaka</option>
-          <option value="rajshahi">Rajshahi</option>
-        </select>
-
-        <select
-          value={university}
-          onChange={(e) => setUniversity(e.target.value)}
-        >
-          <option value="">Select University</option>
-          <option value="Dhaka University">Dhaka University</option>
-          <option value="Rajshahi University">Rajshahi University</option>
-        </select>
+              <select
+                value={university}
+                onChange={(e) => setUniversity(e.target.value)}
+              >
+                <option value="">Select University</option>
+                <option value="Dhaka University">Dhaka University</option>
+                <option value="Rajshahi University">Rajshahi University</option>
+              </select>
+            </>
+          ))}
       </div>
 
       <button className={styles.apply_filter} onClick={handleApply}>
