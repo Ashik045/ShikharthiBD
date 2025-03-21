@@ -24,6 +24,7 @@ const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
     searchParams.get("university") || ""
   );
 
+  // should update the filter compnent
   const handleApply = () => {
     const query = new URLSearchParams();
 
@@ -43,7 +44,6 @@ const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
       <div className={styles.filters}>
         {hons && (
           <>
-            {" "}
             <select
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
