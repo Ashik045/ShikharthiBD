@@ -18,6 +18,13 @@ const HonoursPage = ({
   const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
 
   // create a function here to fetch the search results from database
+  // const fetchResults = async () => {
+  //   const query = new URLSearchParams({ year, subject, board, university });
+  //   const res = await fetch(`/api/questions?${query.toString()}`);
+  //   const data = await res.json();
+  //   return data;
+  // };
+  // const results = await fetchResults();
 
   // Fake Result Data (Temporary)
   const results = [

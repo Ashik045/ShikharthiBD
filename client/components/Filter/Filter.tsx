@@ -27,14 +27,18 @@ const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
   // should update the filter compnent
   const handleApply = () => {
     const query = new URLSearchParams();
-
     if (year) query.set("year", year);
     if (subject) query.set("subject", subject);
     if (board) query.set("board", board);
     if (university) query.set("university", university);
 
-    // Update the URL without refreshing the page
-    router.push(`/questions/honours?${query.toString()}`);
+    let path = "/questions";
+    if (hons) path += "/honours";
+    if (ssc) path += "/ssc";
+    if (hsc) path += "/hsc";
+    if (admission) path += "/admission";
+
+    router.push(`${path}?${query.toString()}`);
   };
 
   return (
