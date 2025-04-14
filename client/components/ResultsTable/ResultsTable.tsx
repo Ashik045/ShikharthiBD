@@ -15,7 +15,7 @@ const ResultsTable = ({ results }: { results: any[] }) => {
         <table className={styles.results_table}>
           <thead>
             <tr>
-              <th>S/N</th>
+              <th className={styles.table_th_name}>S/N</th>
               <th>Name</th>
               <th>Year</th>
               <th>Board</th>
@@ -26,7 +26,8 @@ const ResultsTable = ({ results }: { results: any[] }) => {
             {results.map((item, index) => {
               return (
                 <tr key={item.id}>
-                  <td>{index + 1}</td> {/* Serial Number */}
+                  <td className={styles.table_th_name}>{index + 1}</td>{" "}
+                  {/* Serial Number */}
                   <td>{item.name}</td>
                   <td>{item.year}</td>
                   <td>{item.board || "N/A"}</td>

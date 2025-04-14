@@ -9,11 +9,15 @@ const hsc = () => {
     {
       id: 1,
       name: "Math 2023 Question",
+      year: "2023",
+      board: "Dhaka",
       pdfUrl: pdfUrl,
     },
     {
       id: 2,
       name: "Physics 2022 Question",
+      year: "2022",
+      board: "Dhaka",
       pdfUrl: pdfUrl,
     },
   ];
