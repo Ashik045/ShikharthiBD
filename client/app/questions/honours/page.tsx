@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // app/questions/honours/page.tsx (✅ Server Component)
 import Filter from "@/components/Filter/Filter";
 import ResultsTable from "@/components/ResultsTable/ResultsTable";
@@ -14,7 +15,7 @@ const HonoursPage = ({
   const board = searchParams.board || "";
   const university = searchParams.university || "";
 
-  console.log(year, subject, board, university);
+  // console.log(year, subject, board, university);
   const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
 
   // create a function here to fetch the search results from database
