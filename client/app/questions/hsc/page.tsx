@@ -1,4 +1,4 @@
-import Filter from "@/components/Filter/Filter";
+import FilterSSCHSC from "@/components/FilterSSCHSC/FilterSSCHSC";
 import ResultsTable from "@/components/ResultsTable/ResultsTable";
 import styles from "@/styles/questions.module.scss";
 
@@ -26,7 +26,8 @@ const hsc = () => {
     <div className={styles.page_container}>
       {/* Pass filters to the Filter component */}
       <div className={styles.filter_wrapper}>
-        <Filter hsc />
+        {/* <Filter hsc /> */}
+        <FilterSSCHSC hsc />
       </div>
 
       {/* show the results here */}
