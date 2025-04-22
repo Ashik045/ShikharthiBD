@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // components/Filter.tsx (✅ Client Component)
 "use client";
 
@@ -80,43 +81,6 @@ const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
               <option value="2023">Fourth year</option>
             </select>
             {/*  */}
-            <select value={year} onChange={(e) => setYear(e.target.value)}>
-              <option value="">Select Year</option>
-              <option value="2023">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2022">2021</option>
-              <option value="2022">2020</option>
-              <option value="2022">2019</option>
-              <option value="2022">2018</option>
-              <option value="2022">2017</option>
-              <option value="2022">2016</option>
-              <option value="2022">2015</option>
-            </select>
-          </>
-        )}
-
-        {(ssc || hsc) && (
-          <>
-            <select
-              value={university}
-              onChange={(e) => setUniversity(e.target.value)}
-            >
-              <option value="">Select Group</option>
-              <option value="">Science</option>
-              <option value="">Humanities</option>
-            </select>
-            <select value={board} onChange={(e) => setBoard(e.target.value)}>
-              <option value="">Select Board</option>
-              <option value="dhaka">Dhaka</option>
-              <option value="rajshahi">Rajshahi</option>
-              <option value="comilla">Comilla</option>
-              <option value="barisal">Barisal</option>
-              <option value="sylhet">Sylhet</option>
-              <option value="dinajpur">Dinajpur</option>
-              <option value="chittagong">Chittagong</option>
-            </select>
-
             <select value={year} onChange={(e) => setYear(e.target.value)}>
               <option value="">Select Year</option>
               <option value="2023">2024</option>
