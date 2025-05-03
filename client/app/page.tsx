@@ -7,7 +7,7 @@ import PopularCourses from "@/components/PopularCourses/PopularCourses";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="" style={{ overflowX: "hidden" }}>
       <Header />
       <FeaturedResources />
       <PopularCourses />
