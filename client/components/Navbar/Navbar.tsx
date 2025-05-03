@@ -61,7 +61,7 @@ const Navbar = () => {
               <a href="#">forums</a>
             </li>
             <li>
-              <a href="#">Interview question</a>
+              <a href="/interview-questions">Interview question</a>
             </li>
             <li>
               <a href="#">চাকরি বিজ্ঞাপন</a>
