@@ -36,7 +36,7 @@ export default function FilterSSCHSC({ hons, ssc, hsc }: FilterParams) {
 
   return (
     <div className={styles.filter_container}>
-      <h3>Filter Questions</h3>
+      <h3>Find {ssc ? "SSC" : "HSC"} Questions</h3>
 
       <div className={styles.filters}>
         {(ssc || hsc) && (

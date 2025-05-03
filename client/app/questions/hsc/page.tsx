@@ -4,7 +4,17 @@ import styles from "@/styles/questions.module.scss";
 
 const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
 
-const hsc = () => {
+const hsc = ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) => {
+  const year = searchParams.year || "";
+  const board = searchParams.board || "";
+  const group = searchParams.group || "";
+
+  console.log(year, board, group);
+
   const results = [
     {
       id: 1,
