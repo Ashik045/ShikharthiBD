@@ -47,56 +47,6 @@ const Filter = ({ hons, ssc, hsc, admission }: FilterParams) => {
       <h3>Filter Questions</h3>
 
       <div className={styles.filters}>
-        {hons && (
-          <>
-            <select
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-            >
-              <option value="">Select Subject</option>
-              <option value="math">BENGALI</option>
-              <option value="physics">ENGLISH</option>
-              <option value="physics">HISTORY</option>
-              <option value="physics">ISLAMIC HISTORY & CULTURE</option>
-              <option value="physics">PHILOSOPHY</option>
-              <option value="physics">ISLAMIC STUDIES</option>
-              <option value="physics">POLITICAL SCIENCE</option>
-              <option value="physics">SOCIOLOGY </option>
-              <option value="physics">SOCIAL WORK </option>
-              <option value="physics">ECONOMICS </option>
-              <option value="physics">ACCOUNTING </option>
-              <option value="physics">MANAGEMENT </option>
-              <option value="physics">PHYSICS </option>
-              <option value="physics">CHEMISTRY </option>
-              <option value="physics">BOTANY </option>
-              <option value="physics">GEOGRAPHY AND ENVIRONMENT </option>
-              <option value="physics">MATHEMATICS </option>
-            </select>
-            {/*  */}
-            <select value={year} onChange={(e) => setYear(e.target.value)}>
-              <option value="">Course Year</option>
-              <option value="2023">First year</option>
-              <option value="2023">Second year</option>
-              <option value="2023">Third year</option>
-              <option value="2023">Fourth year</option>
-            </select>
-            {/*  */}
-            <select value={year} onChange={(e) => setYear(e.target.value)}>
-              <option value="">Select Year</option>
-              <option value="2023">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2022">2021</option>
-              <option value="2022">2020</option>
-              <option value="2022">2019</option>
-              <option value="2022">2018</option>
-              <option value="2022">2017</option>
-              <option value="2022">2016</option>
-              <option value="2022">2015</option>
-            </select>
-          </>
-        )}
-
         {admission && (
           <>
             <select

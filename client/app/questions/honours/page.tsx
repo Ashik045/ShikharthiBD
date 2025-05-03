@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // app/questions/honours/page.tsx (✅ Server Component)
-import Filter from "@/components/Filter/Filter";
+import FilterHons from "@/components/FilterHons/FilterHons";
 import ResultsTable from "@/components/ResultsTable/ResultsTable";
 import styles from "@/styles/questions.module.scss";
 
@@ -11,9 +10,10 @@ const HonoursPage = ({
 }) => {
   // Extract filters from URL
   const year = searchParams.year || "";
+  const course = searchParams.course || "";
   const subject = searchParams.subject || "";
-  const board = searchParams.board || "";
-  const university = searchParams.university || "";
+
+  console.log(year, course, subject);
 
   // console.log(year, subject, board, university);
   const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
@@ -47,7 +47,8 @@ const HonoursPage = ({
     <div className={styles.page_container}>
       {/* Pass filters to the Filter component */}
       <div className={styles.filter_wrapper}>
-        <Filter hons />
+        {/* <Filter hons /> */}
+        <FilterHons />
       </div>
 
       {/* show the results here */}
