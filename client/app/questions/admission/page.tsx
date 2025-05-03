@@ -1,10 +1,20 @@
-import Filter from "@/components/Filter/Filter";
+import FilterAdmission from "@/components/FilterAdmission/FilterAdmission";
 import ResultsTable from "@/components/ResultsTable/ResultsTable";
 import styles from "@/styles/questions.module.scss";
 
 const pdfUrl = "/pdfs/Ashikur_CV.pdf"; // No need to import
 
-const admission = () => {
+const admission = ({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) => {
+  const year = searchParams.year || "";
+  const university = searchParams.university || "";
+  const group = searchParams.group || "";
+
+  console.log(year, university, group);
+
   const results = [
     {
       id: 1,
@@ -24,7 +34,8 @@ const admission = () => {
     <div className={styles.page_container}>
       {/* Pass filters to the Filter component */}
       <div className={styles.filter_wrapper}>
-        <Filter admission />
+        {/* <Filter admission /> */}
+        <FilterAdmission />
       </div>
 
       {/* show the results here */}
